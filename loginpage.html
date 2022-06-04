@@ -1,12 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body {
+        background: rgb(150, 88, 231);
+        background: radial-gradient(circle, rgba(150, 88, 231, 1) 18%, rgba(86, 154, 207, 1) 77%, rgba(150, 88, 231, 1) 79%, rgba(178, 59, 242, 1) 100%);
+    }
+
+    h1 {
+        padding-top: 40px;
+    }
+
+    input {
+        margin: 5%;
+        border: none;
+        padding: 15px;
+        border-width: 0px 0px 1px 0px;
+        border-style: solid;
+        border-color: gray;
+    }
+
+    span {
+        color: hsl(203deg 61% 37%);
+    }
+
+    span:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    #button {
+        background: rgb(73, 137, 186);
+        background: rgb(86, 154, 207);
+        background: linear-gradient(153deg, rgba(86, 154, 207, 1) 45%, rgba(178, 59, 242, 1) 87%);
+        border: none;
+        font-size: 15px;
+        color: white;
+    }
+
+    #button:hover {
+        cursor: pointer;
+    }
+
+    #container {
+        background-color: white;
+
+        border-radius: 10px;
+        border: none;
+    }
+</style>
+
 <body>
-    
+    <div id="container" style="background-color: white;">
+        <h1>Login</h1>
+        <form action="">
+            <input type="text" placeholder="Email" id="email">
+            <input type="text" placeholder="Password" id="password">
+            <input type="Submit" name="Login" id="button">
+            <p>Forgot <span>Password</span>? </p>
+            <p>Don't Have Account <span>SignUp</span>?</p>
+        </form>
+    </div>
 </body>
+
 </html>
+<script>
+    let form = document.querySelector("form")
+    form.style.display = "flex"
+    form.style.flexDirection = "column"
+    form.style.width = "90%"
+    form.style.margin = "auto"
+    form.style.padding = "0px 0px  50px 0px "
+    form.marginTop="25px"
+
+
+
+
+    // function for obtaining log in details
+    let input = document.querySelectorAll("input")
+    document.querySelector("#button").addEventListener("click", Myfunction)
+    let arr = []
+    function Myfunction() {
+        let obj = {}
+        event.preventDefault()
+        let email = document.querySelector("#email")
+        obj["Email"] = email.value
+        let password = document.querySelector("#password")
+        obj["Password"] = password.value
+        let submit = document.querySelector("#button")
+        submit.value = "Login"
+        arr.push(obj)
+        console.log(arr)
+
+
+    }
+    //  console.log(input)
+
+
+    let submit = document.querySelector("#button")
+    submit.value = "Login"
+
+    // container syle
+    let div = document.querySelector("#container")
+    div.style.display = "flex"
+    div.style.flexDirection = "column"
+    div.style.textAlign = "center"
+    div.style.width = "25%"
+    div.style.margin = "auto"
+    div.style.marginTop = "40px"
+    div.style.backgroundColor = "white"
+    div.style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+
+
+
+    let p1 = document.querySelector("p")
+
+
+
+    let p2 = document.querySelector("form>p+p")
+
+</script>
