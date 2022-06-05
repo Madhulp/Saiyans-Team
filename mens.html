@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Clothing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        #container>div>h3:first-child {
+            font-size: 2rem;
+        }
+        
+        #container>div>h3:nth-child(3) {
+            margin: 8px 0px;
+            font-weight: 100;
+            color: grey;
+        }
+        
+        #container>div>.price>span {
+            margin-right: 8px;
+        }
+        
+        #container>div>.price>span:first-child {
+            font-size: 2rem;
+        }
+        
+        #container>div>.price>span:nth-child(2) {
+            font-size: 1rem;
+            color: grey;
+            text-decoration: line-through;
+            font-weight: bold;
+        }
+        
+        #container>div>.price>span:last-child {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div>
+            <img src="https://m.media-amazon.com/images/I/71hx1gwSE2L._UY550_.jpg" width="350px" height="450px" alt="">
+            <h3>PAUSE</h3>
+            <h3>Men Cotton Long Sleeves Shrug</h3>
+            <div class="price"><span>&#8377; 359</span><span>&#8377; 1,499</span><span>-76%</span></div>
+        </div>
+        <div>
+            <img src="https://m.media-amazon.com/images/I/71D9OUWCm9L._UX466_.jpg" width="350px" height="450px" alt="">
+            <h3>JUBINATION</h3>
+            <h3>Men Wool Sleeveless Sweater Pack Of 1</h3>
+            <div class="price"><span>&#8377; 799</span><span>&#8377; 1,499</span><span>-47%</span></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
